@@ -1,0 +1,1056 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.row-fluid [class*="span"] {
+  min-height: 5px;
+}
+.alert p:last-child,
+#content .alert p:last-child,
+.commander_text_column p:last-child,
+.commander_text_column *:last-child,
+#content .commander_text_column p:last-child,
+#content .commander_text_column *:last-child,
+.commander_toggle_content p:last-child,
+.commander_tab .row-fluid:last-child .commander_content_element,
+.commander_accordion .ui-accordion .ui-accordion-content .row-fluid:last-child .commander_content_element {
+  margin-bottom: 0;
+}
+.commander_text_column,
+.commander_tabs,
+.commander_tour,
+.commander_call_to_action,
+.commander_gmaps_widget,
+.commander_accordion,
+.commander_gallery,
+.commander_separator,
+.commander_twitter_widget,
+.commander_flickr_widget,
+.commander_video_widget,
+.last_toggle_el_margin,
+ul.commander_thumbnails-fluid > li,
+.commander_single_image {
+  margin-bottom: 35px;
+}
+.alert,
+.fb_like,
+.twitter-share-button,
+.commander_googleplus,
+.commander_pinterest,
+.commander_button,
+.commander_tab .commander_content_element,
+.commander_accordion .commander_content_element,
+.commander_toggle_content {
+  margin-bottom: 21.739130434782606px;
+}
+.vc_text_separator {
+  margin-bottom: 11.666666666666666px;
+}
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+.commander_content_element img {
+  height: auto;
+  max-width: 100%;
+}
+.commander_separator,
+.vc_text_separator {
+  border-bottom: 1px solid #f7f7f7;
+}
+/* Separator
+---------------------------------------------------------- */
+.commander_separator {
+  clear: both;
+  height: 1px;
+}
+/* Text Separator
+---------------------------------------------------------- */
+.vc_text_separator {
+  position: relative;
+  top: -20px;
+}
+.vc_text_separator div {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 1px 12px;
+  position: relative;
+  top: 10px;
+}
+.separator_align_center {
+  text-align: center;
+}
+.separator_align_left {
+  text-align: left;
+}
+.separator_align_right {
+  text-align: right;
+}
+/* Facebook
+---------------------------------------------------------- */
+.fb_type_standard {
+  height: 25px;
+}
+.fb_type_standard iframe {
+  height: 25px;
+}
+.fb_type_button_count {
+  height: 20px;
+}
+.fb_type_button_count iframe {
+  height: 20px;
+}
+.fb_type_box_count {
+  height: 62px;
+}
+.fb_type_box_count iframe {
+  height: 62px;
+}
+/* Google plus
+---------------------------------------------------------- */
+.commander_googleplus_type_standard {
+  height: 25px;
+}
+.commander_googleplus_type_small {
+  height: 19px;
+}
+.commander_googleplus_type_medium {
+  height: 21px;
+}
+.commander_googleplus_type_tall {
+  height: 21px;
+}
+/* Pinterest
+---------------------------------------------------------- */
+.commander_pinterest_type_horizontal {
+  height: 21px;
+}
+.commander_pinterest_type_vertical {
+  height: 60px;
+}
+.commander_pinterest_type_none {
+  height: 21px;
+}
+/* Toggle / FAQ
+---------------------------------------------------------- */
+.commander_toggle,
+#content h4.commander_toggle {
+  background: url(../images/toggle_open.html) no-repeat left center;
+  padding-left: 25px;
+  clear: both;
+  margin-top: 0;
+}
+.commander_toggle_title_active,
+#content h4.commander_toggle_title_active {
+  background: url(../images/toggle_close.html) no-repeat left center;
+}
+.commander_toggle:hover {
+  cursor: pointer;
+}
+.commander_toggle_content {
+  display: none;
+  overflow: hidden;
+  padding: 0px 0px 0px 25px;
+  margin-top: 10px;
+}
+.commander_toggle_open {
+  display: block;
+}
+/* Widgetised column element
+---------------------------------------------------------- */
+.commander_widgetised_column .commander_wrapper > ul {
+  margin-left: 0;
+}
+.commander_widgetised_column .commander_wrapper > ul > li {
+  list-style: none;
+  margin-left: 0;
+}
+/* Button
+---------------------------------------------------------- */
+a.commander_button_a {
+  text-decoration: none;
+  border: none;
+}
+a.commander_button_a :hover {
+  text-decoration: none;
+}
+/* Commented out because now jQuery UI.css doesn't have any font properties in it.
+.commander_content_element .ui-widget button {
+	font-family: "Lucida Grande";
+	font-size: 13px;
+}
+	.ui-widget button.btn-large {
+		font-size: 15px;
+	}
+	.ui-widget button.btn-small,
+	.ui-widget button.btn-mini {
+		font-size: 11px;
+	}
+*/i.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  vertical-align: text-top;
+  margin-left: 5px;
+}
+.btn-large i.icon {
+  height: 19px;
+  margin-left: 9px;
+}
+.btn-small i.icon {
+  height: 15px;
+}
+.btn-mini i.icon {
+  display: none;
+}
+.commander_address_book i.icon,
+option.commander_address_book {
+  background: url(../images/icons/address-book.html) no-repeat right center;
+}
+.commander_alarm_clock i.icon,
+option.commander_alarm_clock {
+  background: url(../images/icons/alarm-clock.html) no-repeat right center;
+}
+.commander_anchor i.icon,
+option.commander_anchor {
+  background: url(../images/icons/anchor.html) no-repeat right center;
+}
+.commander_application_image i.icon,
+option.commander_application_image {
+  background: url(../images/icons/application-image.html) no-repeat right center;
+}
+.commander_arrow i.icon,
+option.commander_arrow {
+  background: url(../images/icons/arrow.html) no-repeat right center;
+}
+.commander_asterisk i.icon,
+option.commander_asterisk {
+  background: url(../images/icons/asterisk.html) no-repeat right center;
+}
+.commander_hammer i.icon,
+option.commander_hammer {
+  background: url(../images/icons/auction-hammer.html) no-repeat right center;
+}
+.commander_balloon i.icon,
+option.commander_balloon {
+  background: url(../images/icons/balloon.html) no-repeat right center;
+}
+.commander_balloon_buzz i.icon,
+option.commander_balloon_buzz {
+  background: url(../images/icons/balloon-buzz.html) no-repeat right center;
+}
+.commander_balloon_facebook i.icon,
+option.commander_balloon_facebook {
+  background: url(../images/icons/balloon-facebook.html) no-repeat right center;
+}
+.commander_balloon_twitter i.icon,
+option.commander_balloon_twitter {
+  background: url(../images/icons/balloon-twitter.html) no-repeat right center;
+}
+.commander_battery i.icon,
+option.commander_battery {
+  background: url(../images/icons/battery-full.html) no-repeat right center;
+}
+.commander_binocular i.icon,
+option.commander_binocular {
+  background: url(../images/icons/binocular.html) no-repeat right center;
+}
+.commander_document_excel i.icon,
+option.commander_document_excel {
+  background: url(../images/icons/blue-document-excel.html) no-repeat right center;
+}
+.commander_document_image i.icon,
+option.commander_document_image {
+  background: url(../images/icons/blue-document-image.html) no-repeat right center;
+}
+.commander_document_music i.icon,
+option.commander_document_music {
+  background: url(../images/icons/blue-document-music.html) no-repeat right center;
+}
+.commander_document_office i.icon,
+option.commander_document_office {
+  background: url(../images/icons/blue-document-office.html) no-repeat right center;
+}
+.commander_document_pdf i.icon,
+option.commander_document_pdf {
+  background: url(../images/icons/blue-document-pdf.html) no-repeat right center;
+}
+.commander_document_powerpoint i.icon,
+option.commander_document_powerpoint {
+  background: url(../images/icons/blue-document-powerpoint.html) no-repeat right center;
+}
+.commander_document_word i.icon,
+option.commander_document_word {
+  background: url(../images/icons/blue-document-word.html) no-repeat right center;
+}
+.commander_bookmark i.icon,
+option.commander_bookmark {
+  background: url(../images/icons/bookmark.html) no-repeat right center;
+}
+.commander_camcorder i.icon,
+option.commander_camcorder {
+  background: url(../images/icons/camcorder.html) no-repeat right center;
+}
+.commander_camera i.icon,
+option.commander_camera {
+  background: url(../images/icons/camera.html) no-repeat right center;
+}
+.commander_chart i.icon,
+option.commander_chart {
+  background: url(../images/icons/chart.html) no-repeat right center;
+}
+.commander_chart_pie i.icon,
+option.commander_chart_pie {
+  background: url(../images/icons/chart-pie.html) no-repeat right center;
+}
+.commander_clock i.icon,
+option.commander_clock {
+  background: url(../images/icons/clock.html) no-repeat right center;
+}
+.commander_play i.icon,
+option.commander_play {
+  background: url(../images/icons/control.html) no-repeat right center;
+}
+.commander_fire i.icon,
+option.commander_fire {
+  background: url(../images/icons/fire.html) no-repeat right center;
+}
+.commander_heart i.icon,
+option.commander_heart {
+  background: url(../images/icons/heart.html) no-repeat right center;
+}
+.commander_mail i.icon,
+option.commander_mail {
+  background: url(../images/icons/mail.html) no-repeat right center;
+}
+.commander_shield i.icon,
+option.commander_shield {
+  background: url(../images/icons/plus-shield.html) no-repeat right center;
+}
+.commander_video i.icon,
+option.commander_video {
+  background: url(../images/icons/video.html) no-repeat right center;
+}
+/* Call to action
+---------------------------------------------------------- */
+.commander_call_to_action {
+  position: relative;
+  background-color: #f7f7f7;
+  padding: 20px;
+  padding: 2.127659574%;
+  border: 1px solid #f0f0f0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.commander_call_to_action .commander_button {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.cta_align_left .commander_button {
+  float: left;
+}
+.cta_align_right .commander_button {
+  float: right;
+}
+.cta_align_left .commander_button,
+.cta_align_right .commander_button {
+  max-width: 27.872340426%;
+}
+.cta_align_left .commander_call_text,
+.cta_align_right .commander_call_text {
+  width: 70%;
+  float: left;
+  clear: none;
+}
+.cta_align_left .commander_call_text {
+  float: right;
+}
+.commander_call_to_action .commander_call_text,
+#content .commander_call_to_action .commander_call_text {
+  margin: 0;
+  padding-top: 0;
+}
+.cta_align_bottom {
+  text-align: center;
+}
+.cta_align_bottom .commander_button {
+  position: static;
+  margin-top: 2.127659574%;
+  display: inline-block;
+}
+@media (max-width: 600px) {
+  .vc_responsive .cta_align_left .commander_button,
+  .vc_responsive .cta_align_right .commander_button {
+    max-width: 70%;
+    width: 70%;
+    float: none;
+    display: block;
+    margin: 3% auto;
+  }
+  .vc_responsive .cta_align_left .commander_call_text,
+  .vc_responsive .cta_align_right .commander_call_text {
+    width: auto;
+    max-width: none;
+    text-align: center;
+  }
+}
+/* Google maps
+---------------------------------------------------------- */
+.commander_gmaps_widget .commander_map_wraper {
+  background-color: #f7f7f7;
+  padding: 5px;
+}
+.commander_gmaps_widget .commander_map_wraper iframe {
+  margin-bottom: 0;
+  padding: 0;
+  display: block;
+}
+/* Tabs + jQuery UI theme mod
+---------------------------------------------------------- */
+#content .commander_content_element .ui-tabs .ui-tabs-nav {
+  margin: 0;
+}
+.commander_content_element .ui-tabs,
+.commander_content_element .ui-tabs .ui-tabs-nav {
+  padding: 0;
+}
+.commander_content_element .ui-tabs .ui-tabs-nav a,
+.commander_content_element .ui-accordion-header a {
+  border-bottom: none;
+}
+.commander_content_element .ui-tabs .ui-tabs-nav {
+  margin: 0;
+}
+.commander_content_element .ui-tabs .ui-tabs-hide {
+  display: none;
+}
+.commander_content_element .ui-state-default .ui-icon,
+.commander_content_element .ui-state-active .ui-icon {
+  background-image: url(../images/toggle_open.html);
+  background-position: 0 0;
+  position: absolute;
+  right: 0.5em;
+  top: 0.7em;
+}
+.commander_content_element .ui-state-active .ui-icon {
+  background-image: url(../images/toggle_close.html);
+}
+.commander_content_element .ui-tabs .ui-tabs-nav li,
+.commander_content_element .ui-accordion .ui-accordion-header,
+.commander_tabs .ui-tabs .ui-tabs-panel {
+  background-color: #f7f7f7;
+}
+.commander_content_element .ui-tabs .ui-tabs-nav li,
+.commander_content_element .ui-accordion .ui-accordion-header {
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+.commander_content_element .ui-tabs .ui-tabs-nav li:hover,
+.commander_content_element .ui-accordion .ui-accordion-header:hover {
+  background: #f0f0f0;
+}
+.commander_tabs .ui-tabs .ui-tabs-panel,
+.commander_accordion .ui-accordion .ui-accordion-content {
+  padding: 1em;
+}
+/* Tour
+---------------------------------------------------------- */
+.commander_tour .ui-tabs .ui-tabs-nav {
+  float: left;
+  width: 31.914893614%;
+}
+.commander_tour .ui-tabs .ui-tabs-nav li,
+.commander_tour .ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+  clear: both;
+  margin-right: 0;
+  width: 100%;
+}
+.commander_tour .ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+  padding-bottom: 0;
+}
+.commander_tour .ui-tabs .ui-tabs-nav li a {
+  float: none;
+  display: block;
+}
+.commander_tour .commander_tab,
+.commander_tour .commander_tab.ui-tabs-panel {
+  border: none;
+  float: left;
+  width: 68.085106386%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0 0 21.739130434782606px;
+}
+.commander_tour_next_prev_nav {
+  margin-left: 31.914893614%;
+  padding-left: 21.739130434782606px;
+  font-size: 80%;
+}
+.commander_tour_next_prev_nav a {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+}
+.commander_tour_next_prev_nav a :hover {
+  text-decoration: none;
+  border-bottom: none;
+}
+.commander_tour_next_prev_nav span {
+  width: 48%;
+  display: inline-block;
+  padding-top: 10px;
+  float: left;
+}
+.commander_tour_next_prev_nav span.commander_next_slide {
+  text-align: right;
+  float: right;
+}
+/* Re-layout slides if it is to small */
+.commander_tour.span3 .ui-tabs-nav,
+.commander_tour.span2 .ui-tabs-nav,
+.commander_tour.span3 .commander_column_container,
+.commander_tour.span2 .commander_column_container {
+  width: auto;
+  float: none;
+}
+.commander_tour.span3 .commander_tour_next_prev_nav,
+.commander_tour.span2 .commander_tour_next_prev_nav {
+  margin-left: 0;
+}
+.commander_tour.span3 .ui-tabs-nav li,
+.commander_tour.span2 .ui-tabs-nav li,
+.commander_tour.span3 ui-tabs-nav li.ui-tabs-selected,
+.commander_tour.span2 ui-tabs-nav li.ui-tabs-selected,
+.commander_tour.span3 .commander_tour_next_prev_nav,
+.commander_tour.span2 .commander_tour_next_prev_nav {
+  width: 100%;
+  padding-left: 0;
+}
+.commander_tour.span3 .commander_tab,
+.commander_tour.span2 .commander_tab {
+  padding-left: 0;
+  width: 100%;
+  float: none;
+  padding-top: 0.8em;
+}
+/* Accordion
+---------------------------------------------------------- */
+#content .commander_accordion .ui-accordion .ui-accordion-header,
+.commander_accordion .ui-accordion .ui-accordion-header {
+  margin-bottom: 0;
+  padding-top: 0;
+  text-transform: none;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+/* Twitter
+---------------------------------------------------------- */
+#content .commander_twitter_widget ul.tweet_list,
+.commander_twitter_widget ul.tweet_list {
+  margin: 0;
+  padding: 0;
+}
+#content .commander_twitter_widget ul.tweet_list li,
+.commander_twitter_widget ul.tweet_list li {
+  list-style: none;
+  border-bottom: 1px solid #f7f7f7;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+.commander_twitter_widget .tweet_time {
+  padding-left: 5px;
+  color: #f7f7f7;
+}
+.commander_twitter_widget p.twitter_follow_button_wrap {
+  margin-bottom: 0;
+}
+.commander_twitter_widget .twitter_follow_button {
+  background-image: url(../images/twitter_bird.html);
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  display: inline-block;
+  min-height: 16px;
+}
+body ul.commander_thumbnails-fluid li {
+  list-style: none !important;
+  /* No need in list style never */
+
+  background-image: none;
+  /* some themes add bg image as a bullet */
+
+  padding: 0;
+}
+body ul.commander_thumbnails-fluid li .entry-content *:last-child {
+  margin-bottom: 0;
+}
+body .row-fluid .commander_grid ul.commander_thumbnails-fluid,
+body .row-fluid .commander_filtered_grid ul.commander_thumbnails-fluid {
+  margin: 0 0 0 -2.127659574%;
+  padding: 0;
+  width: 102.127659574%;
+  overflow: visible !important;
+}
+.row-fluid ul.commander_thumbnails-fluid > [class*="span"] {
+  margin-left: 2.127659574%;
+}
+/* Grid adjustments */
+.commander_grid .commander_thumbnails-fluid > .span3,
+.commander_filtered_grid .commander_thumbnails-fluid > .span3 {
+  width: 22.802340426%;
+}
+.commander_grid .commander_thumbnails-fluid > .span4,
+.commander_filtered_grid .commander_thumbnails-fluid > .span4 {
+  width: 31.135673759333336%;
+}
+.commander_grid .commander_thumbnails-fluid > .span6,
+.commander_filtered_grid .commander_thumbnails-fluid > .span6 {
+  width: 47.832340426%;
+}
+.commander_grid .commander_thumbnails-fluid > .span12,
+.commander_filtered_grid .commander_thumbnails-fluid > .span12 {
+  width: 97.872340426%;
+}
+@media (max-width: 767px) {
+  .vc_responsive .commander_thumbnails-fluid {
+    margin-left: 0;
+    width: 100%;
+  }
+  .vc_responsive .commander_grid .commander_thumbnails-fluid [class*="span"] {
+    width: 97.872340426%;
+    float: none;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* Teaser grid
+---------------------------------------------------------- */
+.commander_teaser_grid .entry-content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.grid_layout-thumbnail .post-thumb {
+  margin-bottom: 0;
+}
+.grid_layout-thumbnail .post-thumb img {
+  max-width: 100%;
+}
+/* Carousel layout
+---------------------------------------------------------- */
+.commander_carousel .commander_wrapper {
+  position: relative;
+}
+.commander_carousel .prev,
+.commander_carousel .next {
+  position: absolute;
+  top: 3px;
+  background-color: #f7f7f7;
+  padding: 0px 6px 0px 6px;
+  font-size: 12px;
+  z-index: 10;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+.commander_carousel .prev:hover,
+.commander_carousel .next:hover {
+  background-color: #f0f0f0;
+}
+.commander_carousel .prev {
+  right: 30px;
+}
+.commander_carousel .next {
+  right: 0px;
+}
+.commander_carousel .commander_thumbnails-fluid {
+  width: 100%;
+}
+.commander_carousel .commander_thumbnails-fluid > [class*="span"] {
+  height: auto !important;
+}
+/*** Categories filter ***/
+.commander_teaser_grid .categories_filter,
+.commander_categories_filter {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.commander_teaser_grid .categories_filter li,
+.commander_categories_filter li {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.commander_teaser_grid .categories_filter li a,
+.commander_categories_filter li a {
+  border: none;
+  text-decoration: none;
+}
+.commander_teaser_grid .categories_filter li a:hover,
+.commander_categories_filter li a:hover {
+  border-bottom: 1px dotted;
+}
+.commander_teaser_grid .categories_filter li.active a,
+.commander_categories_filter li.active a {
+  border-bottom: 1px dotted;
+}
+/* Image grid
+---------------------------------------------------------- */
+.commander_image_grid .commander_image_grid_ul {
+  margin-left: 0;
+  padding: 0;
+}
+.commander_image_grid .commander_image_grid_ul .isotope-item {
+  list-style: none;
+  margin: 0 1px 1px 0;
+  max-width: 100%;
+}
+.commander_image_grid .commander_image_grid_ul a {
+  display: block;
+}
+.commander_image_grid .commander_image_grid_ul img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* Gallery
+---------------------------------------------------------- */
+.commander_gallery {
+  position: relative;
+  background: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.commander_gallery .commander_gallery_slides {
+  position: relative;
+  margin: 0;
+  border: none;
+  background: none;
+}
+.commander_gallery .commander_gallery_slides a {
+  padding: 0;
+  margin: 0;
+}
+.commander_gallery .commander_gallery_slides .nivo-controlNav,
+.commander_gallery .commander_gallery_slides .flex-control-nav {
+  right: 10px;
+  bottom: auto;
+  top: 10px;
+  width: auto;
+  position: absolute;
+  z-index: 50;
+  font-size: 1px;
+  padding: 0;
+}
+.commander_gallery .commander_gallery_slides .nivo-controlNav li,
+.commander_gallery .commander_gallery_slides .flex-control-nav li {
+  margin: 0;
+  padding: 0;
+}
+.commander_gallery .commander_gallery_slides .nivo-controlNav a,
+.commander_gallery .commander_gallery_slides .flex-control-nav a {
+  background-color: #f7f7f7;
+  padding: 0;
+  margin: 0 0 0 3px;
+  font-size: 1px;
+  text-indent: 100px;
+  overflow: hidden;
+  border: none;
+  float: left;
+  width: 6px;
+  height: 6px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+.commander_gallery .commander_gallery_slides .nivo-controlNav a.active,
+.commander_gallery .commander_gallery_slides .flex-control-nav a.active,
+.commander_gallery .commander_gallery_slides .nivo-controlNav a:hover,
+.commander_gallery .commander_gallery_slides .flex-control-nav a:hover,
+.commander_gallery .commander_gallery_slides .nivo-controlNav a.flex-active,
+.commander_gallery .commander_gallery_slides .flex-control-nav a.flex-active {
+  background-color: #c4c4c4;
+  cursor: pointer;
+}
+.commander_gallery .commander_gallery_slides:hover .flex-direction-nav,
+.commander_gallery .commander_gallery_slides:hover .nivo-directionNav {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.commander_gallery .commander_gallery_slides .nivo-caption {
+  display: none !important;
+}
+.commander_gallery .flex-direction-nav,
+.commander_gallery .nivo-directionNav {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  -webkit-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+}
+.commander_gallery .flex-direction-nav a,
+.commander_gallery .nivo-directionNav a {
+  background-image: url(../images/arrows.png);
+  width: 36px;
+  height: 39px;
+  border: none;
+  display: block;
+  text-indent: -9999px;
+}
+.commander_gallery .flex-direction-nav .flex-next,
+.commander_gallery .nivo-directionNav .flex-next,
+.commander_gallery .flex-direction-nav .nivo-nextNav,
+.commander_gallery .nivo-directionNav .nivo-nextNav {
+  background-position: 0 -39px;
+  right: 0px;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.commander_gallery .flex-direction-nav .flex-prev,
+.commander_gallery .nivo-directionNav .flex-prev,
+.commander_gallery .flex-direction-nav .nivo-prevNav,
+.commander_gallery .nivo-directionNav .nivo-prevNav {
+  left: 0px;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+/*** remove ul & li margins ***/#content .commander_gallery_slides ul.slides,
+.content .commander_gallery_slides ul.slides,
+.commander_gallery_slides ul.slides,
+#content .commander_gallery_slides ul.flex-direction-nav,
+.content .commander_gallery_slides ul.flex-direction-nav,
+.commander_gallery_slides ul.flex-direction-nav,
+body .commander_gallery_slides ul li,
+.commander_content_element .commander_gallery_slides ul li {
+  list-style: none;
+  padding: 0;
+  background-image: none;
+  margin: 0;
+}
+.alert .messagebox_text {
+  padding-left: 28px;
+  background: url(../vc/alert.html) no-repeat left center;
+}
+.alert-info .messagebox_text {
+  background: url(../vc/info.html) no-repeat left center;
+}
+.alert-success .messagebox_text {
+  background: url(../vc/tick.html) no-repeat left center;
+}
+.alert-error .messagebox_text {
+  background: url(../vc/exclamation.html) no-repeat left center;
+}
+/* Flickr stream
+---------------------------------------------------------- */
+.flickr_badge_image {
+  margin: 0 10px 10px 0px;
+  width: 72px;
+  height: 72px;
+  float: left;
+  border: 1px solid #fff;
+  background: none;
+  padding: 0;
+  -webkit-box-shadow: 0px 0px 10px #f7f7f7;
+  -o-box-shadow: 0px 0px 10px #f7f7f7;
+  -moz-box-shadow: 0px 0px 10px #f7f7f7;
+  box-shadow: 0px 0px 10px #f7f7f7;
+}
+.flickr_badge_image a {
+  border: none;
+}
+.flickr_badge_image img {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+p.flickr_stream_wrap {
+  clear: both;
+}
+p.flickr_stream_wrap a {
+  background-image: url(../images/flickr.html);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 25px;
+  display: inline-block;
+}
+/* Video widget
+---------------------------------------------------------- */
+.commander_video_widget .commander_wrapper .commander_video_wrapper {
+  padding-top: 56%;
+  position: relative;
+}
+.commander_video_widget .commander_wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.commander_posts_slider .flex-caption,
+.commander_posts_slider .nivo-caption {
+  background-color: #f7f7f7;
+  opacity: 1;
+  color: inherit;
+  padding: 10px 15px;
+  position: static;
+}
+/* Make all grid-sized elements block level again */
+@media (max-width: 480px) {
+  .vc_responsive div.row-fluid div[class*="span"] {
+    float: none;
+    display: block;
+    width: auto;
+    margin-left: 0;
+  }
+  .vc_responsive .commander_tour .ui-tabs .ui-tabs-nav,
+  .vc_responsive .commander_tour .commander_tab,
+  .vc_responsive .commander_tour_next_prev_nav {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+  .vc_responsive #content .commander_tour .ui-tabs .ui-tabs-nav {
+    margin-bottom: 10px;
+  }
+}
+/* That way icons will be accessible via css in front end too
+---------------------------------------------------------- */
+#commander_visual_composer-elements [class*="icon-"],
+[class^="icon-commander"],
+[class*=" icon-commander"] {
+  margin-right: 7px;
+}
+[class^="icon-commander"],
+[class*=" icon-commander"] {
+  background-image: url(../images/icons/elements/sprite.html);
+  background-position: center center;
+  width: 16px;
+  height: 16px;
+  margin-top: -1px;
+}
+.icon-commander-application-icon-large {
+  background-position: 0 0;
+}
+.icon-commander-application-plus {
+  background-position: 0 -18px;
+}
+.icon-commander-balloon-facebook-left {
+  background-position: 0 -36px;
+}
+.icon-commander-balloon-twitter-left {
+  background-position: 0 -54px;
+}
+.icon-commander-film-youtube {
+  background-position: 0 -72px;
+}
+.icon-commander-images-stack {
+  background-position: 0 -90px;
+}
+.icon-commander-information-white {
+  background-position: 0 -108px;
+}
+.icon-commander-layer-shape-text {
+  background-position: 0 -126px;
+}
+.icon-commander-layout_sidebar {
+  background-position: 0 -144px;
+}
+.icon-commander-map-pin {
+  background-position: 0 -162px;
+}
+.icon-commander-slideshow {
+  background-position: 0 -180px;
+}
+.icon-commander-toggle-small-expand {
+  background-position: 0 -198px;
+}
+.icon-commander-ui-accordion {
+  background-position: 0 -216px;
+}
+.icon-commander-ui-button {
+  background-position: 0 -234px;
+}
+.icon-commander-ui-separator-label {
+  background-position: 0 -252px;
+}
+.icon-commander-ui-separator {
+  background-position: 0 -270px;
+}
+.icon-commander-ui-tab-content-vertical {
+  background-position: 0 -288px;
+}
+.icon-commander-ui-tab-content {
+  background-position: 0 -306px;
+}
+.icon-commander-single-image {
+  background-image: url(../images/icons/elements/single-image.html);
+}
+.icon-commander-call-to-action {
+  background-image: url(../images/icons/elements/call-to-action.html);
+}
+.icon-commander-pinterest {
+  background-image: url(../images/icons/elements/pinterest.html);
+}
+.icon-commander-raw-html {
+  background-image: url(../images/icons/elements/raw-html.html);
+}
+.icon-commander-raw-javascript {
+  background-image: url(../images/icons/elements/raw-javascript.html);
+}
+.icon-commander-flickr {
+  background-image: url(../images/icons/elements/flickr.html);
+}
+/*** VVV ***/
