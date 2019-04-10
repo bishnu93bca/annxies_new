@@ -1,0 +1,1 @@
+<?php include($ROOT_PATH.'/'.MODULE_PATH.'/sitepage/footermenu.php');?>
