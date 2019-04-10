@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background:#eeeeee;
+}
+.container
+{
+	width:1300px;
+}
+select{
+	width:100%; 
+	height:35px;
+	padding:5px;
+	}	
+.navbar-nav{padding:0;  }
+.navbar-inverse {
+  border-color: #3d3d3d;
+  background:#3d3d3d;
+  border-radius:0;
+  padding:10px 0;
+  min-height:100px;
+}
+.navbar-brand{padding:4px 0}
+.navbar-left{padding:10px;}
+.navbar_user{float:right;}
+.navbar_user img{padding:10px;}
+
+.border_box{
+	margin-bottom:10px;
+	padding:20px 0;
+	border:#e1e1e1 solid thin;
+	background:#ffffff;
+}	
+.content_left{
+	border:#e1e1e1 solid thin;
+	background:#ffffff;
+	margin:5px;
+	padding:20px;
+	}
+.content_left_select{margin:20px 0;}
+.content_left select{
+	width:100%; 
+	height:30px;
+	padding:5px;
+	}			
+.content_left option{padding:5px}
+	 
+.content_left .btn{width:100%; height:60px; text-align:left; margin:5px 0;}
+.content_left .badge{float:right;}
+
+.content_right{
+	margin:5px;
+	}
+.table{margin:10px 0;}	
+/*            home - login
+**************************************************/
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+ /*            home - page
+*************************************************/	
+.home-page .thumbnail{min-height:200px} 	
+.user-plan h1{font-size:84px; text-align:center; margin:0;}
+.user-plan h3{font-size:32px; text-align:center; margin:0;}
+.user-plan .progress{margin:10px;}
+
+.user-data p{margin:10px;}
+.home-page .date{font-size:10px; font-weight:bold}
+
+
+/*          voice_mail - page   
+*************************************************/
+.voice_mail-page{	
+    margin-bottom:10px;
+	padding:20px;
+	border:#e1e1e1 solid thin;
+	background:#ffffff;
+}
+
+/*          create-account - page   
+*************************************************/
+.create-account{	
+    margin-bottom:10px;
+	padding:0 50px 50px 50px;
+	border:#e1e1e1 solid thin;
+	background:#ffffff;
+}
+.create-account .thumbnail{min-height:200px} 	
+.create-account .thumbnail h1{font-size:84px; text-align:center; margin:0;}
+.create-account .thumbnail h3{font-size:32px; text-align:center; margin:0;}
+.create-account .radio{text-align:center}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+.footer {
+	background-color:#CCC;
+	padding:10px 0;
+	color:#333333;
+	bottom:0;
+	position:fixed;
+    left:0;
+	right:0;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+label.valid {
+	width: 24px;
+	height: 24px;
+	background: url(assets/img/valid.png) center center no-repeat;
+	display: inline-block;
+	text-indent: -9999px;
+}
+label.error {
+	font-weight: bold;
+	color: red;
+	padding: 2px 8px;
+	margin-top: 2px;
+}
+.paddingtb20
+{
+	padding:20px 0;
+}
+.textaligncenter
+{
+	text-align:center;
+}
+.padding10
+{
+	padding:10px !important;
+}
+.padding0
+{
+	padding:0px !important;
+}
+.grey_font
+{
+	color:#ccc;
+}
