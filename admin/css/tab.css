@@ -1,0 +1,52 @@
+#tab-container {
+	clear:both;
+}
+.etabs {
+	margin: 0;
+	padding: 0;
+}
+.tab {
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+	background:#CCCCCC;
+	border:1px solid #CCCCCC;
+	border-bottom:none;
+	margin-bottom:-1px;
+}
+.tab a {
+	font-size:14px;
+	height:40px;
+	line-height:40px;
+	display: block;
+	padding: 0 10px;
+	outline: none;
+	font-weight: bold;
+	color:#165D8D;
+}
+.tab a:hover {
+	text-decoration:none;
+}
+.tab.active {
+	background: #F1F1F1;
+	position: relative;
+	border-color: #C8C8C8;
+}
+.tab a.active {
+	color:#656565;
+}
+.tab-container .panel-container {
+	background: #F1F1F1;
+	border: solid #C8C8C8 1px;
+	padding: 20px 15px;
+	overflow:hidden;
+}
+.panel-container {
+	margin-bottom: 10px;
+}
+.panel-container ul {
+	list-style:url(../images/bullet_icon.png);
+	line-height:30px;
+	margin:10px 0 0 20px;
+	float:left;
+}
