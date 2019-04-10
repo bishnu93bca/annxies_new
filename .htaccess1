@@ -1,0 +1,214 @@
+
+#SetEnv TZ America/Los_Angeles
+AddDefaultCharset UTF-8
+AddType 'text/html; charset=UTF-8' html
+SetEnvIfNoCase User-Agent "^wget" bad_bot
+<Limit GET POST>
+   Order Allow,Deny
+   Allow from all
+   Deny from env=bad_bot
+</Limit>
+
+# 4 weeks
+<filesMatch "\.(ico|gif|jpg|jpeg|png|flv|pdf|woff|js|css)$">
+Header set Cache-Control "max-age=2419200, public, must-revalidate"
+</filesMatch>
+
+# 1 day
+<FilesMatch "\.(xml|txt)$">
+Header set Cache-Control "max-age=86400, public, must-revalidate"
+</FilesMatch>
+
+# 24 HOURS
+<FilesMatch "\.(html|htm|txt|php)$">
+ Header set Cache-Control "max-age=86400"
+</FilesMatch>
+
+# -----------------------------------------------------------------------
+# Defining MIME types to ensure the web server actually knows about them.
+# -----------------------------------------------------------------------
+<IfModule mod_mime.c>
+    AddType application/javascript          js
+    AddType application/vnd.ms-fontobject   eot
+    AddType application/x-font-ttf          ttf ttc
+    AddType font/opentype                   otf
+    AddType application/x-font-woff         woff
+    AddType image/svg+xml                   svg svgz 
+    AddEncoding gzip                        svgz
+</Ifmodule>
+
+# -----------------------------------------------------------------------
+# Compressing output.
+# -----------------------------------------------------------------------
+<IfModule mod_deflate.c>
+	#The following line is enough for .js and .css
+    AddOutputFilter DEFLATE js css
+	
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE text/xml application/xml text/x-component
+    AddOutputFilterByType DEFLATE application/xhtml+xml application/rss+xml application/atom+xml
+    AddOutputFilterByType DEFLATE image/x-icon image/svg+xml application/vnd.ms-fontobject application/x-font-ttf font/opentype
+	
+	#The following lines are to avoid bugs with some browsers
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html 
+</Ifmodule>
+
+<IfModule mod_headers.c>
+	Header set Connection keep-alive 
+	<FilesMatch "\.(js|css|xml|gz)$">
+		Header append Vary: Accept-Encoding
+	</FilesMatch>
+</IfModule>
+
+Header unset ETag
+FileETag None
+FileETag MTime Size
+
+<IfModule expires_module>
+    ExpiresActive on
+    ExpiresByType text/plain "access plus 1 week"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType application/x-javascript "access plus 1 week"
+    ExpiresByType image/svg+xml "access plus 1 week"
+    ExpiresByType image/gif "access plus 1 week"
+    ExpiresByType image/png "access plus 1 week"
+    ExpiresByType image/ico "access plus 1 week"
+    ExpiresByType image/x-icon "access plus 1 week"
+    ExpiresByType image/jpg "access plus 1 week"
+    ExpiresByType image/jpe "access plus 1 week"
+    ExpiresByType image/jpeg "access plus 1 week"
+    ExpiresByType font/truetype "access plus 1 week"
+    ExpiresByType application/x-font-ttf "access plus 1 week"
+    ExpiresByType font/opentype "access plus 1 week"
+    ExpiresByType application/x-font-otf "access plus 1 week"
+    ExpiresByType application/font-woff "access plus 1 week"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 week"
+    ExpiresByType application/x-shockwave-flash "access plus 1 week"
+    ExpiresByType application/x-httpd-php-source "access plus 1 week"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    #Header set Set-Cookie HttpOnly;
+    #Header edit Set-Cookie "(?i)^((?:(?!;\s?HttpOnly).)+)$" "$1; HttpOnly"
+    #Header edit Set-Cookie ^(.*)$ $1;Secure;HttpOnly
+    #Header set Set-Cookie "%{http_cookie}e; HTTPOnly" env=http_cookie   
+
+    #Custom code to prevent server from clickjacking attack
+    Header append X-FRAME-OPTIONS "SAMEORIGIN"
+    Header append X-FRAME-OPTIONS "DENY"
+    
+    # For security reasons, Option followsymlinks cannot be overridden.
+    Options +FollowSymlinks
+    #Options +SymLinksIfOwnerMatch
+    RewriteEngine On
+
+    #Blocking Spam Referrer---------------------------------------------------------------
+    RewriteCond %{HTTP_REFERER} ^http://.*free-share-buttons\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*googlsucks\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*4webmasters\.org/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*hulfingtonpost\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*Get-Free-Traffic-Now\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*aliexpress\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*simple-share-buttons\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*theguardlan\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*buy-cheap-online\.info/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*event-tracking\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*free-social-buttons\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*uni\.me/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*buttons-for-website\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*best-seo-offer\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*buttons-for-your-website\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*pornhub-forum\.ga/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*best-seo-solution\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*amanda-porn\.ga/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*penamail\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*agm1\.us/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*hao123\.com\.eg/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*1and1\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*telstra\.com\.au/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*myway\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*semalt\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*silktide\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*youporn-forum\.ga/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*torture\.ml/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*forum69\.info/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*o-o-6-o-o\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*Bestwebsitesawards\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*Priceg\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*Lombia\.co/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*Lomb\.co/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*Iskalko\.ru/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*BlackHatWorth\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*Pricereg\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*Econom\.co/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*ILoveVitaly\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*humanorightswatch\.org/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*7makemoneyonline\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*anticrawler\.org/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*humanorightswatch\.org/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*rapidgator-porn\.ga/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*doubleclick\.net/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*delta-search\.com/ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http://.*darodar\.com/ [NC]
+    RewriteRule ^(.*)$ – [F,L]
+    #-------------------------------------------------------------------------------------
+
+    RewriteBase /
+    
+    #RewriteCond %{HTTP_HOST} !^www\.annexis\.net$ [NC]
+    #RewriteRule ^(.*)$ http://www.annexis.net/$1 [L,R=301]
+    
+    # removing multiple slashes after domain
+    RewriteCond %{THE_REQUEST} ^[A-Z]+\ //*(.+)//+(.*)\ HTTP
+    RewriteRule ^ /%1/%2 [R,L]
+    RewriteCond %{THE_REQUEST} ^[A-Z]+\ //+(.*)\ HTTP
+    RewriteRule ^ /%1 [R,L]
+
+    # remove spaces from start or after /
+    #RewriteRule ^(.*/|)[\s%20]+(.+)$ $1$2 [L,R,NE]
+    
+    # remove spaces from end or before /
+    #RewriteRule ^(.+?)[\s%20]+(/.*|)$ $1$2 [L,R,NE]
+    RewriteCond %{REQUEST_URI} ^(.*)//(.*)$
+    RewriteRule . %1/%2 [R=301,L]
+
+    #cannonical issue---------------
+    RewriteRule ^admin/ - [PT,L,QSA]
+    RewriteRule ^admin/$ /admin/index.php [L,QSA]
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.php\ HTTP/
+    RewriteRule ^(.*)index\.php$ /$1 [R=301,L]
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.html\ HTTP/
+    RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.htm\ HTTP/
+    RewriteRule ^(.*)index\.htm$ /$1 [R=301,L]
+
+    ErrorDocument 404 /404.html
+
+    #cannonical issue---------------
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ckeditor/ - [PT,L,QSA]
+    RewriteRule ^ckfinder/ - [PT,L,QSA]
+    RewriteRule ^dwnld/ - [PT,L,QSA]
+    RewriteRule ^uploadedfiles/ - [PT,L,QSA]
+    
+    RewriteRule ^$ /index.php [L,QSA]
+    RewriteRule ^(.*)/(.*)/(.*)/$ /index.php?pageType=$1&dtls=$2&dtaction=$3 [L,QSA]
+    RewriteRule ^(.*)/(.*)/$ /index.php?pageType=$1&dtaction=$2 [L,QSA]
+    RewriteRule ^(.*)/$ /index.php?pageType=$1 [L,QSA]
+    #RewriteRule ^(.*)\.html$ /index.php?pageType=$1 [L,QSA]
+    
+    RewriteCond %{REQUEST_URI} !(/$|\.) 
+    RewriteRule (.*) %{REQUEST_URI}/ [R=301,L] 
+
+RewriteEngine On 
+RewriteCond %{HTTP_HOST} ^annexis.net [NC]
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.annexis.net/$1 [R=301,L]
+</IfModule>
