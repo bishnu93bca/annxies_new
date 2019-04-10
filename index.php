@@ -7,8 +7,8 @@ $token = NoCSRF::generate('csrf_token');
 /*------------------------------------------------------------------
 If the site is disabled
 --------------------------------------------------------------------*/
-if($siteStatus!='Y')
-   // $siteObj->underConstruction();
+if(isset($siteStatus)=='Y')
+    $siteObj->underConstruction();
 /*-------------------------------------------------------------------
 pages_user.php  is for Pagination.
 --------------------------------------------------------------------*/

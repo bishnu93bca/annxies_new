@@ -3,6 +3,7 @@
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!-- 79350dc14ffca8f9332b52a6c48733a6 -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -34,7 +35,7 @@
 <body>
 <div id="container">
     <?php 
-	if($action=='forgot-password') 
+	if(isset($action)=='forgot-password') 
 		include("forgot-password.php");
 	else
 	{
@@ -46,7 +47,7 @@
                     <div>Login</div>
                     <form name="login" method="post" action="">
                         
-                        <?php if($_SESSION['PROTECT']<=10) {?>
+                        <?php if(isset($_SESSION['PROTECT'])<=10) {?>
                         <div id="form">
                            <div class="log_field_block">
 								<div class="log_field">
@@ -74,7 +75,7 @@
                         <?php }?>
                         
                         <span class="warning_login">
-                            <?php if($ErrMsg) echo $ErrMsg;?>
+                            <?php if(isset($ErrMsg)) echo $ErrMsg;?>
                         </span>
                     </form>
                 </div>

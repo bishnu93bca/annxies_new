@@ -3,7 +3,7 @@ while(list($key,$val)=each($_REQUEST))
 	$$key = trim(stripslashes($val)); 
 include("../include.php");
 include("includes/action.php");
-if($_SESSION['LOGIN']=='YES')
+if(isset($_SESSION['LOGIN'])=='YES')
 {
 	include("includes/header.php");
 	include("home.php");

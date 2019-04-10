@@ -30,9 +30,9 @@ $redirectString = base64_encode($rqs[0]);
     
     <script type="text/javascript" src="uploadify/js/jquery.uploadify.js"></script>
 	<?php 
-    if($_SESSION['UTYPE']=="A") 
+    if(isset($_SESSION['UTYPE'])=="A") 
 	{
-		if($dtaction=='modulepermissions' || ($pageType=='usermanagement' && $step==2) || ($pageType=="sitepage" && $dtaction=="new")) 
+		if(isset($dtaction)=='modulepermissions' || (isset($pageType)=='usermanagement' && isset($step)==2) || (isset($pageType)=="sitepage" && isset($dtaction)=="new")) 
 		{
 			?>
             <!--Jquery TreeView-->
